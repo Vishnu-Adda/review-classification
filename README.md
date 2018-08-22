@@ -9,3 +9,5 @@ Its a method we use to extract all the words from the training set, and turning 
 
 # Fitting the models
 For classification, we tested a Naive Bayes model against a Random Forest model, both in Python and R. We found that the Random Forest model attained a better accuracy over the Naive Bayes model, as the confusion matrix scored them 80% vs 73% respectively.
+
+The dataset was obtained from superdatascience.com
