@@ -19,13 +19,10 @@ corpus = tm_map(corpus, stripWhitespace)
 
 # Creating the Bag of Words model
 dtm = DocumentTermMatrix(corpus)
+# Removes terms that aren't used so often
 dtm = removeSparseTerms(dtm, 0.999)
 dataset = as.data.frame(as.matrix(dtm))
 dataset$Liked = dataset_original$Liked
-
-# Importing the dataset
-dataset = read.csv('Social_Network_Ads.csv')
-dataset = dataset[3:5]
 
 # Encoding the target feature as factor
 dataset$Liked = factor(dataset$Liked, levels = c(0, 1))
